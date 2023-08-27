@@ -1,44 +1,33 @@
 package roofestimatecalculator;
 
-
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.TextField;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class RoofEstimateCalculatorController {
-
-    @FXML
-    private MenuBar menu;
-
-    @FXML
-    private Circle radius;
-
-    @FXML
-    private Line radiusLine;
-
     @FXML
     private Label roofLengthInput;
-
-    @FXML
-    private Label roofPitchLabel;
-
     @FXML
     private TextField roofWidthInput;
 
-    @FXML
-    private Label roofWidthLabel;
-
-    @FXML
-    private Label storiesLabel;
+    private TextField roofAreaInput;
     @FXML
     private Button submitButton;
-   
 
 
+    @FXML
+    private void calculateButtonClicked(ActionEvent event) {
+        try {
+            double length = Double.parseDouble(roofLengthInput.getText());
+            double width = Double.parseDouble(roofWidthInput.getText());
+
+            double area = length * width;
+
+            roofAreaInput.setText(String.valueOf(area));
+        } catch (NumberFormatException e) {
+            roofAreaInput.setText("Invalid input");
+        }
+    }
 }
-
-
