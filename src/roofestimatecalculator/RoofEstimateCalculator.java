@@ -7,16 +7,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class RoofEstimateCalculator extends Application {
+    
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("RoofEstimateCalculator.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Roof Estimate Calculator"); 
+        stage.setScene(scene);
+        stage.show();
+    }
     public static void main(String[] args) {
         launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("RoofEstimateCalculator.fxml"));
-
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 }

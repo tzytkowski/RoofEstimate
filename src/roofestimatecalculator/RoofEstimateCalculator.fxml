@@ -16,11 +16,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="522.0" prefWidth="722.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="roofestimatecalculator.RoofEstimateCalculatorController">
@@ -59,40 +54,21 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="171.0" minHeight="0.0" prefHeight="171.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="48.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="171.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="0.0" prefHeight="164.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label fx:id="storiesLabel" text="Number of Stories" />
-            <Slider fx:id="numberStoriesSlider" GridPane.columnIndex="1" />
+            <Slider fx:id="numberStoriesSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
             <Label fx:id="roofWidthLabel" text="Roof Width (ft.)" GridPane.rowIndex="1" />
             <TextField fx:id="roofWidthInput" promptText="Enter the width in feet..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="roofLengthLabel" text="Roof Length (ft.)" GridPane.rowIndex="2" />
             <TextField fx:id="roofLengthInput" promptText="Enter the length in feet..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="roofPitchLabel" text="Roof Pitch (slope)" GridPane.rowIndex="4" />
-            <Circle fx:id="radius" radius="50.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <fill>
-                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="7.13" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.75" green="0.05249999836087227" blue="0.05249999836087227" opacity="0.5" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </fill>
-            </Circle>
-            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#calculateButtonClicked" text="Button" GridPane.rowIndex="5" />
-            <Line fx:id="radiusLine" endX="8.292892456054688" endY="37.29289245605469" startX="57.585784912109375" startY="37.585784912109375" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Line endX="-174.43504333496094" endY="-66.2315673828125" startX="-75.14215087890625" startY="-162.74891662597656" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#calculateButtonClicked" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label text="Roof Area:" GridPane.rowIndex="3" />
-            <TextField fx:id="roofAreaInput" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="roofAreaInput" disable="true" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Slider fx:id="slopeSlider" blockIncrement="30.0" majorTickUnit="30.0" max="180.0" minorTickCount="15" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Label alignment="CENTER" layoutX="140.0" layoutY="6.0" prefHeight="106.0" prefWidth="494.0" text="Roof Estimate Calculator" AnchorPane.rightAnchor="355.0">
@@ -100,22 +76,41 @@
             <Font name="Bodoni MT" size="31.0" />
          </font>
       </Label>
-      <HBox layoutX="154.0" layoutY="112.0" prefHeight="81.0" prefWidth="481.0">
+      <HBox layoutX="156.0" layoutY="207.0" prefHeight="81.0" prefWidth="481.0">
          <children>
             <VBox prefHeight="122.0" prefWidth="241.0">
                <children>
                   <Label alignment="CENTER" prefHeight="42.0" prefWidth="242.0" text="High" />
-                  <TextField fx:id="highResultInput" prefHeight="29.0" prefWidth="241.0" />
+                  <TextField fx:id="highResultInput" editable="false" focusTraversable="false" prefHeight="29.0" prefWidth="241.0" />
                </children>
             </VBox>
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <VBox prefHeight="178.0" prefWidth="206.0">
                <children>
                   <Label alignment="CENTER" prefHeight="44.0" prefWidth="234.0" text="Low" />
-                  <TextField fx:id="lowResultInput" alignment="CENTER" prefHeight="28.0" prefWidth="206.0" />
+                  <TextField fx:id="lowResultInput" alignment="CENTER" editable="false" focusTraversable="false" prefHeight="28.0" prefWidth="206.0" />
                </children>
             </VBox>
          </children>
       </HBox>
+      <Label layoutX="381.0" layoutY="172.0" text="Price" />
+      <VBox alignment="CENTER" layoutX="174.0" layoutY="394.0" prefHeight="81.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" text="Material Cost:" />
+            <TextField fx:id="materialCostLabel" alignment="CENTER" editable="false" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="337.0" layoutY="394.0" prefHeight="81.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" text="Labor Cost: " />
+            <TextField fx:id="laborCostInput" alignment="CENTER" editable="false" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="507.0" layoutY="394.0" prefHeight="81.0" prefWidth="148.0">
+         <children>
+            <Label alignment="CENTER" text="Waste Removal Cost:" />
+            <TextField fx:id="wasteRemovalCostInput" alignment="CENTER" editable="false" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
