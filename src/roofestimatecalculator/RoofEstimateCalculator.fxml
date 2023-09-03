@@ -4,9 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
@@ -25,25 +22,6 @@
    <children>
       <Hyperlink layoutX="786.0" layoutY="486.0" text="https://github.com/tzytkowski" />
       <Slider layoutX="14.0" layoutY="358.0" orientation="VERTICAL" />
-      <MenuBar fx:id="menu" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="140.0" AnchorPane.rightAnchor="849.0" AnchorPane.topAnchor="14.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
       <GridPane layoutX="688.0" layoutY="11.0" prefHeight="472.0" prefWidth="284.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -87,8 +65,8 @@
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <VBox prefHeight="178.0" prefWidth="206.0">
                <children>
-                  <Label fx:id="lowTotalCostInput" alignment="CENTER" prefHeight="44.0" prefWidth="234.0" text="Low" />
-                  <TextField fx:id="lowResultInput" alignment="CENTER" editable="false" focusTraversable="false" prefHeight="28.0" prefWidth="206.0" />
+                  <Label fx:id="lowTotalCostLabel" alignment="CENTER" prefHeight="44.0" prefWidth="234.0" text="Low" />
+                  <TextField fx:id="lowTotalCostInput" alignment="CENTER" editable="false" focusTraversable="false" prefHeight="28.0" prefWidth="206.0" />
                </children>
             </VBox>
          </children>
@@ -97,7 +75,7 @@
       <VBox alignment="CENTER" layoutX="174.0" layoutY="394.0" prefHeight="81.0" prefWidth="100.0">
          <children>
             <Label alignment="CENTER" text="Material Cost:" />
-            <TextField fx:id="materialCostLabel" alignment="CENTER" editable="false" />
+            <TextField fx:id="materialCostInput" alignment="CENTER" editable="false" />
          </children>
       </VBox>
       <VBox alignment="CENTER" layoutX="337.0" layoutY="394.0" prefHeight="81.0" prefWidth="100.0">
