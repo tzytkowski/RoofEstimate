@@ -14,7 +14,7 @@ public class RoofEstimateCalculatorController {
     private TextField roofWidthInput;
     /*
     @FXML
-    private Slider numberStoriesSlider;
+    private Slider numberStoriesSlider;0
 */
     @FXML
     private TextField wasteRemovalCostInput;
@@ -22,7 +22,11 @@ public class RoofEstimateCalculatorController {
     private TextField laborCostInput;
     @FXML
     private TextField materialCostInput;
-
+    @FXML 
+    private TextField highTotalCostInput;
+    @FXML 
+    private TextField lowTotalCostInput;
+    
     @FXML
     void calculateButtonClicked(ActionEvent event) {
         double length = Double.parseDouble(roofLengthInput.getText());
@@ -39,11 +43,15 @@ public class RoofEstimateCalculatorController {
         double materialCost = costPerSqFt * area;
         double laborCost = laborCostPerSqFt * area;
         double wasteRemovalCost = wasteRemovalCostPerSqFt * area;
+        double highTotalCost = materialCost + laborCost + wasteRemovalCost  + 1000;
+        double lowTotalCost = materialCost + laborCost + wasteRemovalCost  + 1000;
 
         // Display or use the calculated costs
         materialCostInput.setText(String.valueOf(materialCost));
         laborCostInput.setText(String.valueOf(laborCost));
         wasteRemovalCostInput.setText(String.valueOf(wasteRemovalCost));
+        lowTotalCostInput.setText(String.valueOf(lowTotalCost));
+        highTotalCostInput.setText(String.valueOf(highTotalCost));
     }
 
 }

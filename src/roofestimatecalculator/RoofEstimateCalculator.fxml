@@ -81,13 +81,13 @@
             <VBox prefHeight="122.0" prefWidth="241.0">
                <children>
                   <Label alignment="CENTER" prefHeight="42.0" prefWidth="242.0" text="High" />
-                  <TextField fx:id="highResultInput" editable="false" focusTraversable="false" prefHeight="29.0" prefWidth="241.0" />
+                  <TextField fx:id="highTotalCostInput" editable="false" focusTraversable="false" prefHeight="29.0" prefWidth="241.0" />
                </children>
             </VBox>
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <VBox prefHeight="178.0" prefWidth="206.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="44.0" prefWidth="234.0" text="Low" />
+                  <Label fx:id="lowTotalCostInput" alignment="CENTER" prefHeight="44.0" prefWidth="234.0" text="Low" />
                   <TextField fx:id="lowResultInput" alignment="CENTER" editable="false" focusTraversable="false" prefHeight="28.0" prefWidth="206.0" />
                </children>
             </VBox>
