@@ -1,7 +1,8 @@
 /* Set the background color and text color for the entire application */
 .mainFxmlClass {
     -fx-font-family: "Roboto";
-    -fx-text-fill: "white"; 
+    -fx-text-fill: #333333;
+    -fx-background-color: #ff9966;
     
 }
 

@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="522.0" prefWidth="1067.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="roofestimatecalculator.RoofEstimateCalculatorController">
@@ -86,5 +87,7 @@
       <TextField fx:id="highTotalCostInput" alignment="CENTER" editable="false" focusTraversable="false" layoutX="30.0" layoutY="166.0" prefHeight="29.0" prefWidth="241.0" />
       <Label fx:id="lowTotalCostLabel" alignment="CENTER" layoutX="277.0" layoutY="129.0" prefHeight="44.0" prefWidth="234.0" text="Low" />
       <TextField fx:id="lowTotalCostInput" alignment="CENTER" editable="false" focusTraversable="false" layoutX="291.0" layoutY="166.0" prefHeight="28.0" prefWidth="206.0" />
+      <Line fx:id="line" endX="111.5" endY="53.5" layoutX="167.0" layoutY="272.0" startX="-60.0" startY="54.0" />
+      <Line fx:id="line2" endX="100.0" layoutX="379.0" layoutY="326.0" startX="-100.0" />
    </children>
 </AnchorPane>
