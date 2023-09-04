@@ -12,7 +12,7 @@ public class RoofEstimateCalculator extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("RoofEstimateCalculator.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Roof Estimate Calculator"); 
+        stage.setTitle("Roof Estimate Calculator");
         stage.setScene(scene);
         stage.show();
     }

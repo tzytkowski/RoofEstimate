@@ -1,18 +1,16 @@
 /* Set the background color and text color for the entire application */
 .mainFxmlClass {
-    -fx-background-color: #ffffcc; /* Dark background color */
-    -fx-text-fill: white; /* Set text color to white */
-    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-font-family: "Roboto";
+    -fx-text-fill: "white"; 
+    
 }
 
 /* Apply styles to individual elements */
 
 /* Title */
 #title {
-    -fx-background-color: #444; /* Slightly lighter background color */
-    -fx-text-fill: white; /* Set text color to white */
-    -fx-font-family: "Verdana"; /* Use Verdana font */
-    -fx-font-size: 20px; /* Increase title font size */
+    -fx-font-size: 24px;/* Increase title font size */
+    -fx-font-family: "Bodoni MT";
 }
 
 /* TextFields */
@@ -22,8 +20,8 @@
     -fx-background-radius: 5px; /* Add some border radius for a cleaner look */
     -fx-border-color: #ccc; /* Add a border color */
     -fx-border-width: 2px; /* Increase border width for text inputs */
-    -fx-text-fill: black; /* Set text color for text inputs */
-    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-text-fill: black; 
+    -fx-font-family: "Roboto";
 }
 
 /* Change the color of prompt text */
@@ -34,13 +32,13 @@
 /* Labels */
 .label {
     -fx-text-fill: #555; /* Slightly lighter text color */
-    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-font-family: "Roboto";
     -fx-font-size: 14px; /* Adjust label font size */
 }
 
 /* Sliders */
 .slider {
-    -fx-background-color: #ccc; /* Set slider track color */
+    -fx-background-color: "inherit"; /* Set slider track color */
 }
 
 /* Buttons */
@@ -48,7 +46,7 @@
     -fx-background-color: #555; /* Slightly darker button background color */
     -fx-text-fill: white; /* Set text color to white */
     -fx-background-radius: 5px; /* Add some border radius for a cleaner look */
-    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-font-family: "Roboto";
     -fx-font-size: 14px; /* Adjust button font size */
 }
 
