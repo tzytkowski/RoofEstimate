@@ -1,30 +1,41 @@
 /* Set the background color and text color for the entire application */
 .mainFxmlClass {
-    -fx-background-color: #990033;
+    -fx-background-color: #ffffcc; /* Dark background color */
     -fx-text-fill: white; /* Set text color to white */
+    -fx-font-family: "Verdana"; /* Use Verdana font */
 }
 
 /* Apply styles to individual elements */
 
 /* Title */
 #title {
-    -fx-background-color: black;
+    -fx-background-color: #444; /* Slightly lighter background color */
     -fx-text-fill: white; /* Set text color to white */
+    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-font-size: 20px; /* Increase title font size */
 }
 
 /* TextFields */
 .text-input {
-    -fx-font-size: 14px; /* Adjust font size as needed */
-    -fx-padding: 5px; /* Adjust padding as needed */
+    -fx-font-size: 16px; /* Adjust font size as needed */
+    -fx-padding: 10px; /* Increase padding for text inputs */
     -fx-background-radius: 5px; /* Add some border radius for a cleaner look */
     -fx-border-color: #ccc; /* Add a border color */
-    -fx-border-width: 1px; /* Adjust border width as needed */
+    -fx-border-width: 2px; /* Increase border width for text inputs */
     -fx-text-fill: black; /* Set text color for text inputs */
+    -fx-font-family: "Verdana"; /* Use Verdana font */
+}
+
+/* Change the color of prompt text */
+.text-input .text {
+    -fx-prompt-text-fill: #999; /* Change the color of the prompt text */
 }
 
 /* Labels */
 .label {
-    -fx-text-fill: white; /* Set text color to white */
+    -fx-text-fill: #555; /* Slightly lighter text color */
+    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-font-size: 14px; /* Adjust label font size */
 }
 
 /* Sliders */
@@ -34,9 +45,11 @@
 
 /* Buttons */
 .button {
-    -fx-background-color: #333; /* Set button background color */
+    -fx-background-color: #555; /* Slightly darker button background color */
     -fx-text-fill: white; /* Set text color to white */
     -fx-background-radius: 5px; /* Add some border radius for a cleaner look */
+    -fx-font-family: "Verdana"; /* Use Verdana font */
+    -fx-font-size: 14px; /* Adjust button font size */
 }
 
 /* Apply specific styles to your elements */
@@ -47,9 +60,9 @@
 #highTotalCostInput,
 #lowTotalCostInput,
 #wasteRemovalCostInput {
-    -fx-pref-height: 30px; /* Adjust the height of text input bubbles */
+    -fx-pref-height: 40px; /* Increase the height of text input bubbles */
 }
 
 #submitButton {
-    -fx-pref-width: 100px; /* Adjust the width of the submit button */
+    -fx-pref-width: 120px; /* Increase the width of the submit button */
 }
