@@ -34,7 +34,7 @@
 .label {
     -fx-text-fill: #555; /* Slightly lighter text color */
     -fx-font-family: "Roboto";
-    -fx-font-size: 14px; /* Adjust label font size */
+    -fx-font-size: 12px; /* Adjust label font size */
 }
 
 /* Sliders */
